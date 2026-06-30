@@ -55,12 +55,12 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
 
 ## 🌱 Progresso
 
-* [ x] Introdução
-* [ x] Variáveis
-* [ x] Operadores
-* [x ] Condicionais
-* [ x] Laços de repetição
-* [ x] Funções
+* [ ] Introdução
+* [ ] Variáveis
+* [ ] Operadores
+* [ ] Condicionais
+* [ ] Laços de repetição
+* [ ] Funções
 * [ ] Objetos
 * [ ] Arrays
 * [ ] Módulos
