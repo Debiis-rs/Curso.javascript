@@ -48,11 +48,12 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
 
 ## 🛠️ Tecnologias
 
-* JavaScript
-* Node.js
-* Git
-* GitHub
-* Visual Studio Code
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=js,c,python,git,github,vscode,node.js,typescript"/>
+
+</div>
+
 
 ---
 
