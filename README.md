@@ -1,10 +1,10 @@
-# 🌙 JavaScript Back-End — Instituto Hardware BR
+#  JavaScript Back-End — Instituto Hardware BR
 
 <div align="center">
 
-✨ **Repositório dedicado aos meus estudos de JavaScript Back-End** ✨
+ **Repositório dedicado aos meus estudos de JavaScript Back-End** 
 
-Desenvolvido durante o curso do **Instituto Hardware BR** 💙
+Desenvolvido durante o curso do **Instituto Hardware BR** 
 
 *"Pequenos commits todos os dias constroem grandes projetos."* 🚀
 
