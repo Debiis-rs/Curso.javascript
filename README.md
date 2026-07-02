@@ -50,7 +50,7 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=js,c,python,git,github,vscode,typescript,Node.js"/>
+<img src="https://skillicons.dev/icons?i=js,git,github,vscode,typescript"/>
 
 </div>
 
