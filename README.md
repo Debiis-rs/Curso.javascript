@@ -1,6 +1,6 @@
-#  JavaScript Back-End — Instituto Hardware BR
+   # JavaScript Back-End — Instituto Hardware BR
 
-<div align="center">
+   <div align="center">
 
  **Repositório dedicado aos meus estudos de JavaScript Back-End** 
 
