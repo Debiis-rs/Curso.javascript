@@ -1,6 +1,8 @@
+ <div align="center">
    # JavaScript Back-End — Instituto Hardware BR
+ </div>
 
-   <div align="center">
+<div align="center">
 
  **Repositório dedicado aos meus estudos de JavaScript Back-End** 
 
