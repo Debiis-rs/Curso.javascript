@@ -1,6 +1,7 @@
- <div align="center">
-   # JavaScript Back-End — Instituto Hardware BR
- </div>
+
+
+# JavaScript Back-End — Instituto Hardware BR
+
 
 <div align="center">
 
