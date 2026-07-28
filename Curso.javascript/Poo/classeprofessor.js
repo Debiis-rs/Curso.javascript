@@ -1,4 +1,4 @@
-class Professor{
+export class Professor{
     constructor(nome,idFuncional){
         this.nome = nome ;
         this.idFuncional = idFuncional;

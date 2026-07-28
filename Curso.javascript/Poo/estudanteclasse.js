@@ -1,4 +1,4 @@
-class Estudante {
+export class Estudante {
     nome;
     matricula;
     dataNascimento;
