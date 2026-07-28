@@ -10,9 +10,9 @@ class Professor{
         console.log(`Disciplina${nomeDisciplina} adicionada ao professor ${this.nome}`);
     }
 }
+
 const sofia = new Professor("sofia tamaguchi","12082029", );
 const caio = new Professor("caio ambrosio","12345679", );
-
 
 caio.adicionandoDisciplina('Literatura')
 console.log(caio)
