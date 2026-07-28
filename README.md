@@ -8,9 +8,6 @@
  **Repositório dedicado aos meus estudos de JavaScript Back-End** 
 
 Desenvolvido durante o curso do **Instituto Hardware BR** 
-
-*"Pequenos commits todos os dias constroem grandes projetos."* 🚀
-
 </div>
 
 ---
@@ -40,6 +37,7 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
  ┣ 📂 lista-01
  ┣ 📂 lista-02
  ┣ 📂 lista-03
+ ┣ 📂 poo
  ┣ 📂 avaliacao
  ┗ 📜 README.md
 ```
@@ -65,7 +63,7 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
 * [x] Condicionais
 * [x] Laços de repetição
 * [x] Funções
-* [ ] Objetos
+* [x] Objetos
 * [ ] Arrays
 * [ ] Módulos
 * [ ] Node.js
@@ -85,19 +83,5 @@ O objetivo é registrar minha evolução na área de desenvolvimento back-end e 
 
 ---
 
-## 📈 Evolução
 
-Pretendo atualizar este repositório conforme avanço no curso, mantendo um histórico da minha aprendizagem e dos projetos desenvolvidos.
-
----
-
-<div align="center">
-
-### 🌸 Obrigada pela visita!
-
-Se este repositório foi útil para você, considere deixar uma ⭐.
-
-**Happy Coding!** 💙
-
-</div>
 
