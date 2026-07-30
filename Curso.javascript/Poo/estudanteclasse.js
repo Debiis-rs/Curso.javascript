@@ -31,7 +31,7 @@ export class Estudante {
 }
   }
         const Debora = new Estudante("Debora Silva", "20048", "27-03-2008");
-        const Ana = new Estudante("Ana Clara", "20067", "12-09-2006");
+        const Ana = new Estudante("Ana Clara", "20067", "03-09-2006");
         const Renato = new Estudante("Renato Moreira", "23045", "01-03-2007");
 
         Debora.adicionandoNota(9.8)
