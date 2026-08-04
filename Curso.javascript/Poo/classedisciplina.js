@@ -1,6 +1,6 @@
 //AGREGAÇÃO
-import {Professor} from './classeprofessor.js';
-import{Estudante} from './estudanteclasse.js';
+import {Professor} from './classeProfessor.js';
+import{Estudante} from './Estudanteclasse.js';
 
 export class Disciplina{
     constructor(nome,codigo,cargaHoraria){
