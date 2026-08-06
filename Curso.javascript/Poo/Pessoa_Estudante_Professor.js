@@ -16,7 +16,7 @@ class Pessoa{
         console.log(`Olá, meu nome é ${this.nome}`);
     }
 }
-/*
+
 class Estudante extends Pessoa{
 
     constructor(nome,datadeNascimento,cpf,matricula){
@@ -57,7 +57,7 @@ console.log(estudante.cpf);
 pessoaComum.apresentar();
 estudante.apresentar();
 professor.apresentar();
-*/
+
 
 class Funcionario extends Pessoa{
     #salario;
