@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultando uma API usando método fetch</title>
+    <style>
+        /* Estilos básicos para melhorar a aparência */
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        .usuario-card { border: 1px solid #000000; border-radius: 8px; padding: 15px; margin-bottom: 15px; background-color: #d880f3; }
+        h1 { color: #581f51; }
+        p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Usuários da API</h1>
+
+    <!-- Este é o container onde vamos injetar os dados dos usuários -->
+    <div id="lista-usuarios">
+        <p>Carregando emojis...</p>
+    </div>
+
+    <script>
+      async function buscarEExibiremojis() {
+        const url = "https://emojihub.yurace.pro/api/all";
+        
+        // Seleciona o container no HTML onde os dados serão exibidos
+        const container = document.getElementByname('lista-emojis');
+
+        try {
+          const response = await fetch(url);
+
+          if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+          }
+
+          const emoji = await response.json();
+
+          // Limpa a mensagem de "Carregando..."
+          container.innerHTML = '';
+
+          // Para cada usuário, cria um bloco de HTML e o adiciona ao container
+          emoji.forEach(emoji => {
+            // Cria um novo elemento div para o card do usuário
+            const emojiname = document.createElement('div');
+            emojiname.className = 'category-name'; // Adiciona uma classe para o CSS
+
+            // Preenche o card com o HTML contendo as informações do usuário
+            emojiname.innerHTML = `
+              <h2>${emoji.name} (Category: ${emoji.category})</h2>
+              <p><strong>Group:</strong> ${emoji.group}</p>
+              <p><strong>Htmlcode:</strong> ${emoji.htmlCode}</p>
+              <p><strong>Unicode:</strong> ${emoji.unicode}</p>
+            `;
+            
+            // Adiciona o card recém-criado ao container na página
+            container.appendChild(emojiname);
+          });
+
+        } catch (error) {
+          console.error("Falha ao buscar emoji:", error);
+          // Exibe uma mensagem de erro na página também
+          container.innerHTML = '<p style="color: red;">Falha ao carregar os emojis. Tente novamente mais tarde.</p>';
+        }
+      }
+
+      // Chama a função para executar
+     buscarEExibiremojis();
+    </script>
+
+</body>
+</html>

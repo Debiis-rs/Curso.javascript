@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo uma API com JS</title>
+</head>
+<body>
+
+    <h1>Verifique o console para ver a lista de usuários!</h1>
+    <p>Pressione F12 para abrir as Ferramentas do Desenvolvedor.</p>
+
+    <!-- O CÓDIGO JAVASCRIPT VAI AQUI DENTRO -->
+    <script>
+      // A função principal é 'async' para podermos usar 'await'
+      async function buscarUsuarios() {
+        const url = "https://jsonplaceholder.typicode.com/users";
+
+        try {
+          // 1. Faz a requisição para a URL e aguarda a resposta
+          const response = await fetch(url);
+
+          // 2. Verifica se a requisição foi bem-sucedida (status 200 OK)
+          if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+          }
+
+          // 3. Converte a resposta para o formato JSON e aguarda o resultado
+          const usuarios = await response.json();
+
+          // 4. Exibe os dados formatados no console
+          console.log("=== Lista de Usuários da API ===");
+          usuarios.forEach(user => {
+            console.log(`
+              ID: ${user.id}
+              Nome: ${user.name}
+              Email: ${user.email}
+              Cidade: ${user.address.city}
+              Empresa: ${user.company.name}
+              ------------------------------------
+            `);
+          });
+
+        } catch (error) {
+          console.error("Falha ao buscar usuários:", error);
+        }
+      }
+
+      // Chama a função para executar a busca
+      buscarUsuarios();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo uma API com JS</title>
+    <style>
+        /* Estilos básicos para melhorar a aparência */
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        .usuario-card { border: 1px solid #ff6e6e; border-radius: 8px; padding: 15px; margin-bottom: 15px; background-color: #f9f9f9; }
+        h1 { color: #333; }
+        p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Usuários da API</h1>
+
+    <!-- Este é o container onde vamos injetar os dados dos usuários -->
+    <div id="lista-usuarios">
+        <p>Carregando usuários...</p>
+    </div>
+
+    <script>
+      async function buscarEExibirUsuarios() {
+        const url = "https://jsonplaceholder.typicode.com/users";
+        
+        // Seleciona o container no HTML onde os dados serão exibidos
+        const container = document.getElementById('lista-usuarios');
+
+        try {
+          const response = await fetch(url);
+
+          if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+          }
+
+          const usuarios = await response.json();
+
+          // Limpa a mensagem de "Carregando..."
+          container.innerHTML = '';
+
+          // Para cada usuário, cria um bloco de HTML e o adiciona ao container
+          usuarios.forEach(user => {
+            // Cria um novo elemento div para o card do usuário
+            const userCard = document.createElement('div');
+            userCard.className = 'usuario-card'; // Adiciona uma classe para o CSS
+
+            // Preenche o card com o HTML contendo as informações do usuário
+            userCard.innerHTML = `
+              <h2>${user.name} (ID: ${user.id})</h2>
+              <p><strong>Email:</strong> ${user.email}</p>
+              <p><strong>Cidade:</strong> ${user.address.city}</p>
+              <p><strong>Empresa:</strong> ${user.company.name}</p>
+            `;
+            
+            // Adiciona o card recém-criado ao container na página
+            container.appendChild(userCard);
+          });
+
+        } catch (error) {
+          console.error("Falha ao buscar usuários:", error);
+          // Exibe uma mensagem de erro na página também
+          container.innerHTML = '<p style="color: red;">Falha ao carregar os usuários. Tente novamente mais tarde.</p>';
+        }
+      }
+
+      // Chama a função para executar
+      buscarEExibirUsuarios();
+    </script>
+
+</body>
+</html>
