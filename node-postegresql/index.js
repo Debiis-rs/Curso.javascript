@@ -24,6 +24,12 @@ app.get("/aluno/:ra", async (req,res) => {
     res.json(aluno).status(200);
 });
 
+app.post("/alunos", async (req,res) => {
+    await db.adicionarAluno(req.body);
+    res.json(aluno).status(200);
+});
+
+
 
 
 

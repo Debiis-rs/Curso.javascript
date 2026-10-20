@@ -20,9 +20,18 @@ async function selecionarAlunos(){
     const result= await pool.query('SELECT * FROM alunos');
     return result.rows;
 }
+
 async function selecionarAluno(ra){
     const pool= await Connect();
     const result= await pool.query('SELECT * FROM alunos  WHERE ra=$1', [ra]);
+    return result.rows;
+}
+
+async function adicionarAluno(aluno){
+    const pool= await Connect();
+    const result= await pool.query(
+        'INSERT INTO alunos (nome,idade) VALUES ($1, $2);',
+        [aluno.nome,aluno.idade]);
     return result.rows;
 }
 
@@ -32,4 +41,5 @@ module.exports = {
     Connect,
     selecionarAlunos,
     selecionarAluno,
+    adicionarAluno,
 }
