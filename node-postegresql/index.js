@@ -1,3 +1,4 @@
+//contruindo as rotas 
 require("dotenv").config();
 
 const db = require("./db");
@@ -12,6 +13,17 @@ app.get("/",(req,res) => {
     res.send("Bem vindo ao IFB!").status(200);
 
 });
+
+app.get("/alunos", async (req,res) => {
+    const alunos= await db.selecionarAlunos();
+    res.json(alunos).status(200);
+});
+
+app.get("/aluno/:ra", async (req,res) => {
+    const aluno = await db.selecionarAluno(req.params.ra);
+    res.json(aluno).status(200);
+});
+
 
 
 

@@ -14,8 +14,22 @@ async function Connect() {
 }
 Connect();
 
+//função de manipulção do BD 
+async function selecionarAlunos(){
+    const pool= await Connect();
+    const result= await pool.query('SELECT * FROM alunos');
+    return result.rows;
+}
+async function selecionarAluno(ra){
+    const pool= await Connect();
+    const result= await pool.query('SELECT * FROM alunos  WHERE ra=$1', [ra]);
+    return result.rows;
+}
+
 
 
 module.exports = {
-    Connect
+    Connect,
+    selecionarAlunos,
+    selecionarAluno,
 }
