@@ -26,8 +26,23 @@ app.get("/aluno/:ra", async (req,res) => {
 
 app.post("/alunos", async (req,res) => {
     await db.adicionarAluno(req.body);
-    res.json(aluno).status(200);
+    res.sendStatus(201);
 });
+
+app.patch("/alunos/:ra", async (req,res) => {
+    await db.atualizarAluno(req.params.ra, req.body);
+    res.sendStatus(201);
+});
+app.delete("/alunos/:ra", async (req,res) => {
+    await db.excluirAluno(req.params.ra);
+    res.sendStatus(204);
+});
+
+
+
+
+
+
 
 
 

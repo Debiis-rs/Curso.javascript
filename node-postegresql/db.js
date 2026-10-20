@@ -35,6 +35,18 @@ async function adicionarAluno(aluno){
     return result.rows;
 }
 
+async function atualizarAluno(ra,aluno){
+    const pool= await Connect();
+    const result= await pool.query(
+        'UPDATE alunos SET nome = $1 ,idade = $2 WHERE (ra = $3);',
+        [aluno.nome, aluno.idade, ra]);
+}
+
+async function excluirAluno(ra){
+    const pool = await Connect();
+    const result = await pool.query( 'DELETE FROM alunos WHERE ra =$1;',[ra]);
+}
+
 
 
 module.exports = {
@@ -42,4 +54,6 @@ module.exports = {
     selecionarAlunos,
     selecionarAluno,
     adicionarAluno,
+    atualizarAluno,
+    excluirAluno
 }
